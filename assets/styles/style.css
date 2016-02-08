@@ -1,0 +1,584 @@
+/*
+Theme Name: Wordo Wordpress
+Theme URI: http://wordo.co
+Author: ChiTML
+Author URI: http://chitml.com/
+Description: 2013 Wordo Wordpress theme
+Version: 1.0
+*/
+
+body {
+	margin: 0;
+    font-family: BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #666;
+    font-size: 1.3rem;
+}
+
+nav {
+	background: #fbfbfb;
+	height: 4rem;
+	line-height: 4rem;
+	text-align: center;
+	text-shadow: 1px 1px white;
+}
+
+nav .logo {
+	font-weight: 800;
+	letter-spacing: 0.05rem;
+	font-size: 2rem;
+	color: #000;
+	display: inline-block;
+}
+nav .logo:hover {color: #555;}
+
+nav .profile {
+    background: url(https://abs.twimg.com/sticky/default_profile_images/default_profile_4_normal.png);
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 50px;
+    top: 12px;
+    -webkit-filter: grayscale(30%);
+    filter: grayscale(30%);
+    cursor: pointer;
+    opacity: 0.8;
+    display: none;
+
+}
+
+nav .profile:hover {
+   -webkit-filter: grayscale(0%);
+   opacity: 1;
+   background-position-y: 1px;
+   background-position-x: 1px;
+
+}
+
+nav .login-with-twitter {
+    position: absolute;
+    right: 50px;
+    top: 0;
+    font-size: 1rem;
+    /*display: none;*/
+    padding: 0 10 0 10;
+ 
+}
+nav .login-with-twitter:hover {background: white; color: black}
+
+a {
+	text-decoration: none;
+	color: inherit;;
+}
+
+ .profileimg {
+	background: url(https://abs.twimg.com/sticky/default_profile_images/default_profile_4.png);
+	height: 100px;
+	width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+	background-color: gray;
+	margin-bottom: 15px;
+	margin-top: 100px;
+}
+
+
+.container {
+	width: 80%;
+	width: 500px;
+	max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+	padding: 10px;
+	background: white;
+	border: 1px dashed #d4d4d4;
+	font-size: inherit;
+}
+
+.notes-profile {
+    background-color: #fbfbfb;
+    padding: 100px 0 100px 0;
+    text-shadow: 1px 1px white;
+    margin-top: 100px;
+}
+
+.notes-profile ul {
+    list-style: none;
+    width: 500px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.notes-profile ul li {
+    padding: 10px 0 10px 0;
+    border-bottom: 1px dashed #d4d4d4;
+}
+
+.profiletabs {
+    display: inline;
+    position: relative;
+    bottom: 114px;
+    height: 100px;
+    line-height: 100px;
+    border-right: 1px dashed #d4d4d4;
+    padding: 25px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.profiletabs:hover {
+    opacity: 1;
+    color: black;
+}
+
+.button-red {
+	display: block;
+    background: white;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px dashed salmon;
+    margin-top: 100px;
+    border-radius: 20px;
+    padding: 10px;
+    color: salmon;
+    cursor: pointer;
+    outline: none;
+}
+
+.button-red:hover {
+    border: 1px dashed red;
+	color: red;
+	
+}
+
+.button-red:focus {
+	position: relative;
+	top: 1px;
+	color: red;
+}
+
+.button-green {
+	display: block;
+    background: white;
+    /*width: 100px;*/
+    margin: 0 auto;
+    text-align: center;
+    border: 1px dashed #6ef1b2;
+    margin-top: 100px;
+    border-radius: 20px;
+    padding: 10px;
+    color: #6ef1b2;
+    cursor: pointer;
+    outline: none;
+    margin-top: 0;
+}
+
+.button-green:hover {
+	color: #46ba82;
+    border: 1px dashed #46ba82;
+}
+
+.button-green:focus {
+	position: relative;
+	top: 1px;
+	color: #46ba82;
+}
+
+h3 {
+    color: #333;
+    font-size: 2.5rem;
+    margin: 15px;
+    font-weight: 200;
+}
+
+.notes {
+    background-color: #fbfbfb;
+    padding: 100px 0 100px 0;
+    text-shadow: 1px 1px white;
+    margin-top: 100px;
+    font-family: BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #666;
+    font-size: 1.3rem;
+}
+
+.notes ul {
+    list-style: none;
+    width: 500px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.notes ul li {
+    padding: 10px 0 10px 0;
+    border-bottom: 1px dashed #d4d4d4;
+}
+
+.new-notifications {
+	background: #ffefc6;
+	text-shadow: 1px 1px white;
+}
+
+.notification ul {
+    list-style: none;
+    width: 500px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.notification ul li {
+    padding: 10px 0 10px 0;
+    border-bottom: 1px dashed #d4d4d4;
+}
+
+.mywl-link {
+	display: block;
+	float: right;
+	font-size: 70px;
+	color: #d4d4d4;
+	position: relative;
+	left: 115px;
+	margin-top:-15px;
+	color: rgb(212, 212, 212);
+}
+.mywl-link.favorited{
+	color:red;
+}
+
+.mywl-link:hover {
+	color: red;
+	cursor:pointer;
+}
+
+.mywl-hide { display: none; }
+.mywl-img { padding-left: 13px;
+    padding-top: 41px;
+    position: absolute;}
+
+.search {
+	width: 500px;
+	height: 80px;
+	margin-top: 50px;
+	outline-width: 0;
+	border: 1px #d4d4d4 dashed;
+	font-size: 40px;
+	text-indent: 30px;
+	font-family: Roboto;
+	font-weight: 500;
+	color: #333;
+}
+
+#result{
+	margin-left:40px;
+	text-align:left;
+	font-family: Roboto, Helvetica Neue, Helvetica, Arial;
+	font-weight: 200;
+	font-size: 30px;
+	opacity:0;
+}
+
+#result .a {
+	text-decoration:none;
+	color: #666;
+	border-bottom: 1px dashed white;
+}
+
+#result .a:hover {
+	border-bottom: 1px dashed #666;
+}
+#result .a:visited{
+	color: #666;
+}
+
+#result .a:visited:hover{
+	color: #4cee98;
+}
+
+
+#log{
+	display:block;
+}
+input[placeholder], [placeholder], *[placeholder] {
+   color: #black !important;
+
+}
+
+::-webkit-input-placeholder {  
+	color: #d4d4d4;
+	font-family: Roboto;
+}
+div.a{
+	display:inline;
+	cursor:pointer;
+}
+
+
+.deftypewrapper{
+    position: absolute;
+    width: 100px;
+	
+	margin: 10px 0 0 -129px;
+}
+.deftype {
+	background-color: #FAFAFA;
+	color: #999;
+	font-size: 14px;
+	text-shadow: 1px 1px white;
+	padding: 5px;
+	font-family: Courier New;
+	float:right;
+	text-align:right;
+}
+.definition {
+	color: #666;
+	margin-top: 30px;
+	margin-left: -9px;
+}
+.deftype:hover {
+	background: black;
+	color: white;
+	text-shadow: none;
+	cursor: help;
+}
+
+nav .profile-icon {
+    background: url(https://pbs.twimg.com/profile_images/673858689174863872/CEegJawA_normal.jpg);
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    border-radius: 50%;
+    position: absolute;
+    right: 50px;
+    top: 12px;
+    -webkit-filter: grayscale(30%);
+    filter: grayscale(30%);
+    opacity: 0.8;
+}
+
+nav .profile-icon:hover {
+   -webkit-filter: grayscale(0%);
+   opacity: 1;
+   background-position-y: 1px;
+   background-position-x: 1px;
+}
+
+.mywl-link-login {
+	display: block;
+	float: right;
+	font-size: 70px;
+	color: #d4d4d4;
+	position: relative;
+	left: 115px;
+	margin-top:-15px;
+	color: #d4d4d4;
+}
+.mywl-link-login:hover {
+	color: red;
+}
+
+nav .notifications-nav{
+    position: absolute;
+    right: 110px;
+    top: 0;
+    font-size: 1rem;
+    display: block;
+    padding: 0 10 0 10;
+}
+
+nav .login-with-twitter:hover {background: white; color: black;}
+/*nav .logout-with-twitter:hover {background: white; color: black;}*/
+nav .notifications-nav:hover {background: white; color: black;}
+
+a:active {color:#666;}
+a:visited {color:#666;}
+a {color:#666;}
+
+
+/*body {*/
+/*	font-family: Roboto, Helvetica Neue, Helvetica, Arial;*/
+/*	font-size: 30px;*/
+/*	width: 500px;*/
+/*	margin: 0 auto;*/
+/*	font-weight: 200;*/
+/*	margin-top: 10px;*/
+/*}*/
+
+
+/*.vraagteken {*/
+/*		position: absolute;*/
+/*		right: 20px;*/
+/*		bottom: 20px;*/
+		
+/*	}*/
+	
+/*	.vraagteken a {*/
+/*		color: black;*/
+/*		font-size: 20px;*/
+/*		text-decoration: none;*/
+/*		opacity: 0.4;*/
+/*		padding: 20px;*/
+/*		font-weight: 500;*/
+/*	}*/
+	
+/*	.vraagteken a:hover {*/
+/*		opacity: 1;*/
+/*	}*/
+/*#menutopright {*/
+/*	color: red;*/
+/*	float: right;*/
+/*	text-align: right;*/
+/*}*/
+
+/*#menutopright a {*/
+/*	text-decoration: none;*/
+/*	display: block;*/
+/*	right: 90px;*/
+/*	top: 25px;*/
+/*	font-size: 18px;*/
+/*	color: #d4d4d4;*/
+/*}*/
+
+/*#menutopright a:hover {*/
+/*	color: black;*/
+/*}*/
+
+
+
+/*.logo {*/
+/*	float: left;*/
+/*	color: #333;*/
+/*	text-align: center;*/
+/*	padding: 5px;*/
+/*	width: 75px;*/
+/*	height: 79px;*/
+/*	font-weight: 800;*/
+/*	font-size: 60px;*/
+/*	line-height: 90px;*/
+/*	text-indent: 25px;*/
+/*}*/
+
+/*.subtitle {*/
+/*font-size: 25px;*/
+/*position: relative;*/
+/*top: -41px;*/
+/*left: 125px;*/
+/*color: #d4d4d4;*/
+/*width: 300px;*/
+/*height: 50px;*/
+/*line-height: 50px;*/
+/*}*/
+
+
+/*.logo:hover {*/
+/*	opacity: 0.7;*/
+/*}*/
+
+/*.logo:hover .subtitle {*/
+/*	color: black;*/
+/*}*/
+
+/*::selection {*/
+/*	background-color: black;*/
+/*	color: white;*/
+/*}*/
+
+/*#notes{*/
+/*	margin-left:40px;*/
+/*	opacity:0;*/
+/*}*/
+
+/*#notes .a {*/
+/*	text-decoration:none;*/
+/*	color: #666;*/
+/*	border-bottom: 1px dashed white;*/
+/*}*/
+
+/*#notes .a:hover {*/
+/*	border-bottom: 1px dashed #666;*/
+/*}*/
+/*#notes .a:visited{*/
+/*	color: #666;*/
+/*}*/
+
+/*#notes .a:visited:hover{*/
+/*	color: #4cee98;*/
+/*}*/
+
+/*#fbconnectlogin{*/
+/*	float:right;*/
+/*	padding:24px;*/
+	/*display:none;/*temporary*/
+/*}*/
+/*#logoutbutton{*/
+/*	float:right;*/
+/*}*/
+/*.sfdpng{*/
+/*	position: relative;*/
+/*	right: 130px;*/
+/*	top: 95px;*/
+/*	opacity: 0.3;*/
+/*}*/
+
+/*#loginpage, #profilepage{*/
+/*	top:140px;*/
+/*	position:absolute;*/
+/*}*/
+/*#normalpage{*/
+/*	top:140px;*/
+/*	position:absolute;*/
+/*	max-width:50%;*/
+/*}*/
+
+/*nav {*/
+/*	background: #fbfbfb;*/
+/*	height: 4rem;*/
+/*	line-height: 4rem;*/
+/*	text-align: center;*/
+/*	text-shadow: 1px 1px white;*/
+/*}*/
+
+/*nav .logo {*/
+/*	font-weight: 800;*/
+/*	letter-spacing: 0.05rem;*/
+/*	font-size: 2rem;*/
+/*	color: #000;*/
+/*	display: inline-block;*/
+/*}*/
+/*nav .logo:hover {color: #555;}*/
+
+
+
+/*nav .login-with-twitter {*/
+/*    position: absolute;*/
+/*    right: 50px;*/
+/*    top: 0;*/
+/*    font-size: 1rem;*/
+/*    display: block;*/
+/*    padding: 0 10 0 10;*/
+/*}*/
+
+
+/*nav .logout-with-twitter {*/
+/*    position: absolute;*/
+/*    right: 85px;*/
+/*    top: 0;*/
+/*    font-size: 1rem;*/
+/*    display: block;*/
+/*    padding: 0 10 0 10;*/
+/*}*/
+
+/*button {*/
+/*	padding: 10px;*/
+/*	background: white;*/
+/*	border: 1px dashed #d4d4d4;*/
+/*	font-size: inherit;*/
+/*}*/

@@ -1,0 +1,37 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteBase /
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php
+RewriteRule ^index\.php$ / [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule (@\w{1,15}) /profile\.php?screen_name=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} (\/)\s*([a-zA-Z-]+)\s+([a-zA-Z-]+)\s+([a-zA-Z-]+)\s+([a-zA-Z-]+)\s+([a-zA-Z]+)\s*
+RewriteRule \s*([a-zA-Z-]+)\s+([a-zA-Z-]+)\s+([a-zA-Z-]+)\s+([a-zA-Z-]+)\s+([a-zA-Z]+)\s* /$1_$2_$3_$4_$5 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} (\/)\s*([a-zA-Z-]+)\s+([a-zA-Z-]+)\s+([a-zA-Z-]+)\s+([a-zA-Z]+)\s*
+RewriteRule \s*([a-zA-Z-]+)\s+([a-zA-Z-]+)\s+([a-zA-Z-]+)\s+([a-zA-Z]+)\s* /$1_$2_$3_$4 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} (\/)\s*([a-zA-Z-]+)\s+([a-zA-Z-]+)\s+([a-zA-Z]+)\s*
+RewriteRule \s*([a-zA-Z-]+)\s+([a-zA-Z-]+)\s+([a-zA-Z]+)\s* /$1_$2_$3 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} (\/)\s*([a-zA-Z-]+)\s+([a-zA-Z]+)\s*
+RewriteRule \s*([a-zA-Z-]+)\s+([a-zA-Z]+)\s* /$1_$2 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ / [L]
+
+</IfModule>
